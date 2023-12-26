@@ -15,7 +15,7 @@ const theme=createTheme({
    
     <div className="App">
       <h1>hello world </h1>
-      <SignUp/>
+      {/* <SignUp/> */}
     
       <Main />
     <MiniDrawer />
