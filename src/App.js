@@ -12,7 +12,8 @@ function App() {
   return (
    
     <div className="App">
-      {/* <SignUp/> */}
+      <h1>hello world </h1>
+      <SignUp/>
     
       <Main />
     <MiniDrawer />
