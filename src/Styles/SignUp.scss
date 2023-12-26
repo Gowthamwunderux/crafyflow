@@ -1,0 +1,57 @@
+@import './Variables.scss';
+
+.container {
+  height: 100vh;
+}
+.sign-up {
+  height: 80vh;
+  width: 400px;
+  margin-top: 6rem;
+}
+.TermsPrivacy {
+  position: relative;
+  top: 5rem;
+  color:gray;
+}
+.btn {
+  width: 70%;
+  position: relative;
+  top: 9rem;
+}
+.googleAccount {
+  position: relative;
+  top: 8rem;
+}
+.textField {
+  width: 80%;
+  position: relative;
+  top: 50px;
+  text-align: center;
+}
+.sign-in-btn {
+  position: relative;
+  top: 10rem;
+}
+.OR {
+  margin-left: 30px;
+}
+.OR::before {
+  content: '';
+  display: block;
+  width: 130px;
+  height: 1px;
+  background: #383838;
+  left: 0;
+  top: 50%;
+  position: absolute;
+}
+.OR::after {
+  content: '';
+  display: block;
+  width: 130px;
+  height: 1px;
+  background: #383838;
+  right: 0;
+  top: 50%;
+  position: absolute;
+}

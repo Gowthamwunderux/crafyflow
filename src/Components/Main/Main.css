@@ -1,0 +1,36 @@
+.items {
+  display: flex;
+  flex-direction: row;
+}
+.child-items {
+  width: 80px;
+  height: 80px;
+  margin: auto;
+  border-radius: 20px;
+}
+.child-items:hover {
+  border: 2px solid #7895cb;
+}
+.Wireframe {
+  background-color: #a3dbff;
+  font-size: 12px;
+}
+.Flows {
+  background-color: #d3e8fa;
+  font-size: 12px;
+}
+.Designer {
+  background-color: #f6e6fa;
+  font-size: 12px;
+}
+.Sitemap {
+  background-color: #f8ebff;
+  font-size: 12px;
+}
+.StyleGuide{
+  background-color: #e5f0ff;
+  font-size: 12px;
+}
+header {
+  background-color: #f8fbfd;
+}
