@@ -6,36 +6,26 @@ import MiniDrawer from "./Components/Main/SideBar/SideBar";
 import Button from "@mui/material/Button";
 import SignUp from "./Components/SignUp/SignUp";
 
-import { ThemeProvider, createTheme } from '@mui/material/styles';
-import CssBaseline from '@mui/material/CssBaseline';
-
-
-
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import CssBaseline from "@mui/material/CssBaseline";
 function App() {
-const [darkMode,setDarkMode]=useState(true)
-const darkTheme = createTheme({
-  palette: {
-    mode:darkMode ? 'dark':'light',
-  },
-});
+  const [darkMode, setDarkMode] = useState(true);
+  const darkTheme = createTheme({
+    palette: {
+      mode: darkMode ? "dark" : "light",
+    },
+  });
   return (
-    
-      <>   
+    <>
       <ThemeProvider theme={darkTheme}>
-        <CssBaseline/>
+        <CssBaseline />
         <h1>hello world </h1>
-      
-      {/* <SignUp/> */}
-      <Main />
-      <MiniDrawer checked={darkMode} change={()=>setDarkMode(!darkMode)}/>
-       </ThemeProvider>
 
-
-  
-      </>
-      
-    
-   
+        {/* <SignUp/> */}
+        <Main />
+        <MiniDrawer checked={darkMode} change={() => setDarkMode(!darkMode)} />
+      </ThemeProvider>
+    </>
   );
 }
 export default App;

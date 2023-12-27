@@ -19,7 +19,8 @@ import ListItemText from "@mui/material/ListItemText";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
 import Switch from "@mui/material/Switch";
-const label={inputProps:{'area-label':'switch'}}
+import { Container } from "@mui/material";
+const label = { inputProps: { "area-label": "switch" } };
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,
@@ -135,10 +136,9 @@ const Drawer = styled(MuiDrawer, {
   }),
 }));
 
-export default function MiniDrawer({change, check}) {
-
+export default function MiniDrawer({ change, check }) {
   const theme = useTheme();
-  const [open, setOpen] = React.useState(true);
+  const [open, setOpen] = React.useState(false);
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -149,9 +149,12 @@ export default function MiniDrawer({change, check}) {
   };
 
   return (
+
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
-      <AppBar position="fixed" open={open}>
+      <AppBar  position="fixed" open={open}>
+      
+      
         <Toolbar>
           <IconButton
             color="inherit"
@@ -166,13 +169,16 @@ export default function MiniDrawer({change, check}) {
             CRAFYFLOW
           </Typography>
           <MaterialUISwitch
-          {...label}
-          defaultChecked
-          color="default"
+            {...label}
+            defaultChecked
+            color="default"
             sx={{ m: 1, position: "absolute", right: 0 }}
-            onClick={change} checked={check }
+            onClick={change}
+            checked={check}
           />
         </Toolbar>
+        
+    
       </AppBar>
       <Drawer variant="permanent" open={open}>
         <DrawerHeader>
@@ -237,5 +243,6 @@ export default function MiniDrawer({change, check}) {
       </Drawer>
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}></Box>
     </Box>
+  
   );
 }
