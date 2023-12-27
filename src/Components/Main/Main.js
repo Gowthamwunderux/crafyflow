@@ -15,9 +15,7 @@ function Main() {
           {/* HEADDER */}
           <header style={{ padding: '100px' }}>
             <div>
-              <Typography component="h1" sx={{ fontWeight: 'bold' }}>
-                Brainstorm. Iterate. Evaluate.
-              </Typography>
+             
             </div>
             <div className="items">
               <div className="child-items Wireframe"></div>
