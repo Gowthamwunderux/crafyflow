@@ -16,8 +16,10 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
+import AddBoxIcon from '@mui/icons-material/AddBox';
+import GridViewIcon from '@mui/icons-material/GridView';
+import SpaceDashboardIcon from '@mui/icons-material/SpaceDashboard';
+import RecyclingIcon from '@mui/icons-material/Recycling';
 import Switch from "@mui/material/Switch";
 import { Container } from "@mui/material";
 const label = { inputProps: { "area-label": "switch" } };
@@ -178,7 +180,7 @@ export default function MiniDrawer({ change, check }) {
           />
         </Toolbar>
         
-    
+  
       </AppBar>
       <Drawer variant="permanent" open={open}>
         <DrawerHeader>
@@ -192,7 +194,7 @@ export default function MiniDrawer({ change, check }) {
         </DrawerHeader>
         <Divider />
         <List>
-          {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
+          {["Add Space", "Design Space", "Default Space", "Trash Bin"].map((text, index) => (
             <ListItem key={text} disablePadding sx={{ display: "block" }}>
               <ListItemButton
                 sx={{
@@ -208,7 +210,8 @@ export default function MiniDrawer({ change, check }) {
                     justifyContent: "center",
                   }}
                 >
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                  {index % 2 === 1 ? <AddBoxIcon /> : <GridViewIcon/>}
+                 
                 </ListItemIcon>
                 <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
               </ListItemButton>
@@ -232,8 +235,9 @@ export default function MiniDrawer({ change, check }) {
                     mr: open ? 3 : "auto",
                     justifyContent: "center",
                   }}
-                >
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                > 
+                  {index % 2 != 0 ?<SpaceDashboardIcon /> : <RecyclingIcon />}
+               
                 </ListItemIcon>
                 <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
               </ListItemButton>
